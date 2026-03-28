@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+a,
+span {
+  cursor: none;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #050505;
+  color: #ffffff;
+  /* font-family: 'Space Grotesk', sans-serif; */
+  /* font-family: "Orbitron", sans-serif; */
+  font-family: "Rajdhani", sans-serif;
+  cursor: none;
+  /* Hide default cursor */
+  ;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.orbitron-title {
+  font-family: "Orbitron", sans-serif;
+}
+
+/* Touch devices: restore default */
+@media (hover: none) and (pointer: coarse) {
+  body {
+    cursor: none;
+  }
+
+  .custom-cursor-container {
+    display: none !important;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #38bdf8, #9810FA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00f3ff;
+}
+
+.portrait-circle {
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  border-color: white;
+}
+
+.glass-panel {
+  background: rgba(10, 10, 10, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.neon-text {
+  text-shadow: 0 0 10px rgba(0, 243, 255, 0.3), 0 0 20px rgba(0, 243, 255, 0.2);
+}
+
+.section-h {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.content-wrap {
+  pointer-events: auto;
+}
+
+/* --- CUSTOM CURSOR --- */
+.custom-cursor-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10000;
+  overflow: hidden;
+}
+
+.cursor-arrow {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  transform: translate(-40%, -40%);
+  fill: #000000;
+  stroke: #ffffff;
+  stroke-width: 2.5px;
+  stroke-linejoin: round;
+  transition: fill 0.2s ease, transform 0.1s ease;
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.8));
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+body.hovering .cursor-arrow {
+  fill: #22d3ee;
+  transform: translate(-40%, -40%) scale(1.1);
+  filter: drop-shadow(0 0 5px rgba(34, 211, 238, 0.9));
+}
+
+/* Nav styles are now self-contained in Navbar.jsx */
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #050505;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: opacity 1s ease;
+}
+
+/* ============================================================
+   SKILLS SECTION — Expanding Containers with Star-Trail Glow
+   ============================================================ */
+
+/* Wrapper for all 3 containers */
+.skills-containers-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Outer container — holds the SVG star ring + inner content */
+.skill-container-outer {
+  position: relative;
+  border-radius: 16px;
+  padding: 2px;                       /* border thickness = padding */
+  background: rgba(255, 255, 255, 0.06);
+  transition: background 0.4s ease;
+}
+
+.skill-container-outer:hover {
+  background: transparent;
+}
+
+/* ── SVG orbiting star ring (same technique as hamburger ring) ── */
+.skill-star-ring {
+  position: absolute;
+  inset: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  pointer-events: none;
+  z-index: 2;
+  overflow: visible;
+}
+
+.star-ring-bg {
+  stroke: rgba(255, 255, 255, 0.04);
+  transition: stroke 0.4s ease;
+}
+
+.skill-container-outer:hover .star-ring-bg {
+  stroke: rgba(255, 255, 255, 0.08);
+}
+
+.star-ring-dash {
+  stroke: rgba(255, 255, 255, 0.15);
+  opacity: 0;
+  transition: opacity 0.4s ease, stroke 0.3s ease;
+  filter: drop-shadow(0 0 6px currentColor);
+  animation: star-dash-orbit 9s linear infinite, star-rgb-cycle 6s linear infinite;
+}
+
+.skill-container-outer:hover .star-ring-dash {
+  opacity: 1;
+  stroke: #ffffff;
+}
+
+@keyframes star-dash-orbit {
+  0%   { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -2792; }
+}
+
+@keyframes star-rgb-cycle {
+  0%   { stroke: #ff4444; filter: drop-shadow(0 0 8px #ff4444); }
+  16%  { stroke: #ff44ff; filter: drop-shadow(0 0 8px #ff44ff); }
+  33%  { stroke: #4444ff; filter: drop-shadow(0 0 8px #4444ff); }
+  50%  { stroke: #44ffff; filter: drop-shadow(0 0 8px #44ffff); }
+  66%  { stroke: #44ff44; filter: drop-shadow(0 0 8px #44ff44); }
+  83%  { stroke: #ffff44; filter: drop-shadow(0 0 8px #ffff44); }
+  100% { stroke: #ff4444; filter: drop-shadow(0 0 8px #ff4444); }
+}
+
+/* ── Inner content (sits on top) ── */
+.skill-container-inner {
+  position: relative;
+  z-index: 1;
+  background: #0a0a0a;
+  border-radius: 14px;                /* slightly smaller than outer so glow peeks through */
+  padding: 26px 30px;
+  transition: background 0.4s ease;
+}
+
+.skill-container-outer:hover .skill-container-inner {
+  background: rgba(10, 10, 10, 0.95);
+}
+
+/* ── Header row (always visible) ── */
+.skill-container-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.skill-container-tag {
+  font-family: "Orbitron", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.15em;
+  transition: color 0.3s ease;
+}
+
+.skill-container-outer:hover .skill-container-tag {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.skill-container-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  transition: color 0.3s ease;
+}
+
+.skill-container-outer:hover .skill-container-title {
+  color: #ffffff;
+}
+
+.skill-container-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  transition: background 0.3s ease;
+}
+
+.skill-container-outer:hover .skill-container-line {
+  background: rgba(34, 211, 238, 0.15);
+}
+
+.skill-container-chevron {
+  width: 18px;
+  height: 18px;
+  color: #555;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
+}
+
+.skill-container-outer:hover .skill-container-chevron {
+  transform: rotate(180deg);
+  color: #22d3ee;
+}
+
+/* ── Skill chips grid (hidden by default, revealed on hover) ── */
+.skill-chips-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.4s ease 0.08s,
+    margin-top 0.4s ease,
+    padding-top 0.4s ease;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.skill-container-outer:hover .skill-chips-grid {
+  max-height: 400px;
+  opacity: 1;
+  margin-top: 24px;
+  padding-top: 4px;
+}
+
+/* ── Individual skill chip ── */
+.skill-chip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-chip::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: radial-gradient(
+    circle at 30% 50%,
+    color-mix(in srgb, var(--chip-color) 8%, transparent) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skill-chip:hover {
+  border-color: color-mix(in srgb, var(--chip-color) 40%, transparent);
+  transform: translateY(-2px);
+  box-shadow:
+    0 4px 20px color-mix(in srgb, var(--chip-color) 15%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--chip-color) 20%, transparent);
+}
+
+.skill-chip:hover::before {
+  opacity: 1;
+}
+
+.skill-chip-icon {
+  font-size: 1.6rem;
+  color: #666;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.skill-chip:hover .skill-chip-icon {
+  color: var(--chip-color);
+  text-shadow: 0 0 12px color-mix(in srgb, var(--chip-color) 60%, transparent);
+}
+
+.skill-chip-name {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #888;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.skill-chip:hover .skill-chip-name {
+  color: #fff;
+}
+
+/* ── Responsive: stack nicely on mobile ── */
+@media (max-width: 640px) {
+  .skill-container-inner {
+    padding: 20px 18px;
+  }
+
+  .skill-container-title {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+  }
+
+  .skill-chip {
+    padding: 12px 16px;
+  }
+
+  .skill-chip-icon {
+    font-size: 1.3rem;
+  }
+
+  .skill-chip-name {
+    font-size: 0.8rem;
+  }
+}
+
+/* === ENTRANCE ANIMATIONS === */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out forwards;
+}
+
+@keyframes fade-in-scale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-scale {
+  animation: fade-in-scale 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+/* === HERO BUTTON INVERSE STYLES (for DARK BACKGROUNDS) === */
+.hero-btn-primary-inverse {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  background: #ffffff;
+  color: #0a0a0a;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 2px solid #ffffff;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.hero-btn-primary-inverse::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent);
+  transition: left 0.5s ease;
+}
+.hero-btn-primary-inverse:hover::before {
+  left: 100%;
+}
+.hero-btn-primary-inverse:hover {
+  background: #e5e5e5;
+  border-color: #e5e5e5;
+  box-shadow: 0 4px 20px rgba(255,255,255,0.15);
+  transform: translateY(-1px);
+}
+.hero-btn-outline-inverse {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: transparent;
+  color: #ffffff;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 2px dashed #ccc;
+  transition: all 0.3s ease;
+}
+.hero-btn-outline-inverse:hover {
+  border-color: #ffffff;
+  border-style: solid;
+  transform: translateY(-1px);
+}
