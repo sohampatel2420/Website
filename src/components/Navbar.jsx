@@ -3,8 +3,8 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 const navItems = [
   { num: '01', label: 'HOME', href: '#home', desc: 'Back to the beginning' },
   { num: '02', label: 'ABOUT', href: '#about', desc: 'Who I am & what drives me' },
-  { num: '03', label: 'SKILLS', href: '#skills', desc: 'Technologies & expertise' },
-  { num: '04', label: 'PROJECTS', href: '#work', desc: 'Selected works & case studies' },
+  { num: '03', label: 'SKILLS', href: '#skills', desc: 'Data Science & AI toolkit' },
+  { num: '04', label: 'PROJECTS', href: '#work', desc: 'ML & GenAI case studies' },
   { num: '05', label: 'CONTACT', href: '#contact', desc: 'Let\'s build something together' },
 ];
 
@@ -187,7 +187,7 @@ const Navbar = () => {
 
           {/* Top bar inside overlay */}
           <div className="nav-overlay-topbar">
-            <div className="nav-overlay-logo">VP</div>
+            <div className="nav-overlay-logo">SP</div>
             <div className="nav-overlay-menu-label">MENU</div>
           </div>
 
@@ -226,15 +226,15 @@ const Navbar = () => {
           {/* Bottom bar */}
           <div className="nav-overlay-bottom">
             <div className="nav-bottom-socials">
-              <a href="https://github.com/VrajPatel1635" target="_blank" rel="noopener noreferrer" className="nav-social-link hover-trigger">
+              <a href="https://github.com/sohampatel2420" target="_blank" rel="noopener noreferrer" className="nav-social-link hover-trigger">
                 GITHUB
               </a>
-              <a href="https://www.linkedin.com/in/vraj-patel-b5111a25b/" target="_blank" rel="noopener noreferrer" className="nav-social-link hover-trigger">
+              <a href="https://www.linkedin.com/in/soham-patel-64012827b" target="_blank" rel="noopener noreferrer" className="nav-social-link hover-trigger">
                 LINKEDIN
               </a>
             </div>
             <div className="nav-bottom-email uppercase">
-              Vraj Patel
+              Soham Patel
             </div>
           </div>
         </div>

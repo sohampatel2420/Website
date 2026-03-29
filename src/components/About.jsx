@@ -29,7 +29,7 @@ const About = () => {
                     <div className="relative w-full aspect-3/4 overflow-hidden rounded-2xl bg-white/5" style={{ zIndex: 1 }}>
                         <img 
                             src="/Profile_Pic.png" 
-                            alt="Vraj Patel"
+                            alt="Soham Patel"
                             className="w-full h-full object-cover transition-all duration-700 ease-out grayscale contrast-125 brightness-90 group-hover:grayscale-0 group-hover:contrast-100 group-hover:brightness-100 group-hover:scale-105"
                         />
                         
@@ -54,7 +54,7 @@ const About = () => {
                         <div className="flex items-center gap-4">
                             <div className="w-12 h-px bg-white/30" />
                             <span className="text-[10px] tracking-[0.4em] font-light text-white/50 uppercase">
-                                The Architect
+                                The Data Scientist
                             </span>
                         </div>
                         
@@ -69,19 +69,19 @@ const About = () => {
                         <div className="absolute -left-[2.5px] top-4 w-1 h-1 bg-white/40 rounded-full"></div>
 
                         <p className="text-gray-400 text-lg md:text-xl leading-relaxed font-light max-w-xl">
-                            I am <span className="text-white font-bold">Vraj Patel</span>, a software engineer bridging the gap between technical architecture and aesthetic design. My focus lies in building clean, performant, and accessible web applications that feel flawless to use.
+                            I am <span className="text-white font-bold">Soham Patel</span>, a Data Science fresher with hands-on experience in Machine Learning, NLP, and Generative AI. Proficient in Python, SQL, data preprocessing, exploratory data analysis, and model building. Actively seeking Data Science / AI-ML opportunities to apply analytical and problem-solving skills in real-world scenarios.
                         </p>
                         
                         <div className="grid grid-cols-2 gap-8 pt-4">
                             <div className="space-y-2">
                                 <span className="block text-[10px] tracking-[0.2em] text-white/30 uppercase">Focus</span>
-                                <span className="block text-md text-gray-300 font-light">FullStack Architecture</span>
-                                <span className="block text-md text-gray-300 font-light">MERN Stack</span>
+                                <span className="block text-md text-gray-300 font-light">Machine Learning & AI</span>
+                                <span className="block text-md text-gray-300 font-light">NLP & Generative AI</span>
                             </div>
                             <div className="space-y-2">
                                 <span className="block text-[10px] tracking-[0.2em] text-white/30 uppercase">Education</span>
-                                <span className="block text-md text-gray-300 font-light">Computer Eng.</span>
-                                <span className="block text-md text-gray-300 font-light">LDCE | 2027</span>
+                                <span className="block text-md text-gray-300 font-light">B.Voc (IT) — 8.16 CGPA</span>
+                                <span className="block text-md text-gray-300 font-light">Silver Oak Univ. | 2025</span>
                             </div>
                         </div>
                     </div>

@@ -2,34 +2,67 @@ import React from "react";
 
 const skillCategories = [
   {
-    title: "Frontend Modules",
+    title: "Programming & Data",
     tag: "01",
     skills: [
-      { name: "React", icon: "fa-brands fa-react", color: "#61DAFB" },
-      { name: "Next.js", icon: "fa-solid fa-n", color: "#ffffff" },
-      { name: "HTML5", icon: "fa-brands fa-html5", color: "#E34F26" },
-      { name: "CSS3", icon: "fa-brands fa-css3-alt", color: "#1572B6" },
-      { name: "Tailwind", icon: "fa-solid fa-wind", color: "#38B2AC" },
-      { name: "JS (ES6+)", icon: "fa-brands fa-js", color: "#F7DF1E" },
+      { name: "Python", icon: "fa-brands fa-python", color: "#3776AB" },
+      { name: "SQL", icon: "fa-solid fa-database", color: "#4479A1" },
+      { name: "Pandas", icon: "fa-solid fa-table", color: "#150458" },
+      { name: "NumPy", icon: "fa-solid fa-calculator", color: "#013243" },
+      { name: "Matplotlib", icon: "fa-solid fa-chart-line", color: "#11557C" },
+      { name: "Seaborn", icon: "fa-solid fa-chart-area", color: "#4C72B0" },
     ],
   },
   {
-    title: "Backend & Data",
+    title: "Data Analysis & Visualization",
     tag: "02",
     skills: [
-      { name: "Node.js", icon: "fa-brands fa-node", color: "#339933" },
-      { name: "Express", icon: "fa-solid fa-server", color: "#ffffff" },
-      { name: "MongoDB", icon: "fa-solid fa-database", color: "#47A248" },
-      { name: "Firebase", icon: "fa-brands fa-google", color: "#FFA611" },
+      { name: "Data Cleaning", icon: "fa-solid fa-broom", color: "#22d3ee" },
+      { name: "EDA", icon: "fa-solid fa-magnifying-glass-chart", color: "#38bdf8" },
+      { name: "Statistical Analysis", icon: "fa-solid fa-square-root-variable", color: "#a78bfa" },
+      { name: "Data Visualization", icon: "fa-solid fa-chart-pie", color: "#34d399" },
     ],
   },
   {
-    title: "Tools & Core",
+    title: "Machine Learning",
     tag: "03",
     skills: [
-      { name: "Git", icon: "fa-brands fa-git-alt", color: "#F05032" },
-      { name: "Java", icon: "fa-brands fa-java", color: "#fca311" },
-      { name: "Python", icon: "fa-brands fa-python", color: "#3776AB" },
+      { name: "Regression", icon: "fa-solid fa-chart-line", color: "#F89939" },
+      { name: "Classification", icon: "fa-solid fa-tags", color: "#1E90FF" },
+      { name: "Clustering", icon: "fa-solid fa-circle-nodes", color: "#e879f9" },
+      { name: "Feature Engineering", icon: "fa-solid fa-gears", color: "#fbbf24" },
+      { name: "Model Evaluation", icon: "fa-solid fa-clipboard-check", color: "#4ade80" },
+      { name: "Scikit-learn", icon: "fa-solid fa-brain", color: "#F89939" },
+      { name: "XGBoost", icon: "fa-solid fa-bolt", color: "#1E90FF" },
+    ],
+  },
+  {
+    title: "Deep Learning & AI",
+    tag: "04",
+    skills: [
+      { name: "Neural Networks", icon: "fa-solid fa-network-wired", color: "#FF6F00" },
+      { name: "CNNs", icon: "fa-solid fa-image", color: "#38bdf8" },
+      { name: "RNNs", icon: "fa-solid fa-rotate", color: "#a78bfa" },
+      { name: "NLP", icon: "fa-solid fa-language", color: "#34d399" },
+      { name: "Computer Vision", icon: "fa-solid fa-eye", color: "#f472b6" },
+      { name: "TensorFlow", icon: "fa-solid fa-network-wired", color: "#FF6F00" },
+      { name: "HuggingFace", icon: "fa-solid fa-robot", color: "#FFD21E" },
+    ],
+  },
+  {
+    title: "Generative & Agentic AI",
+    tag: "05",
+    skills: [
+      { name: "LLMs", icon: "fa-solid fa-comments", color: "#10A37F" },
+      { name: "RAG", icon: "fa-solid fa-book-open", color: "#7B68EE" },
+      { name: "Embeddings", icon: "fa-solid fa-vector-square", color: "#22d3ee" },
+      { name: "LangChain", icon: "fa-solid fa-link", color: "#2dd4bf" },
+      { name: "LangGraph", icon: "fa-solid fa-diagram-project", color: "#38bdf8" },
+      { name: "n8n", icon: "fa-solid fa-sitemap", color: "#FF6D5A" },
+      { name: "Vector DB", icon: "fa-solid fa-cubes", color: "#a78bfa" },
+      { name: "ChatBots", icon: "fa-solid fa-headset", color: "#10A37F" },
+      { name: "FAISS", icon: "fa-solid fa-magnifying-glass", color: "#7B68EE" },
+      { name: "Ollama", icon: "fa-solid fa-microchip", color: "#00D4AA" },
     ],
   },
 ];
@@ -42,12 +75,12 @@ const Skills = () => {
         <div className="flex items-center gap-4 mb-14 self-start">
           <div className="w-12 h-px bg-white/30" />
           <span className="text-[10px] tracking-[0.4em] font-light text-white/50 uppercase">
-            Technologies & Expertise
+            Data Science & AI Stack
           </span>
         </div>
 
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-[1.1] tracking-tight self-start mb-14">
-          Tools I <span className="font-bold">work with.</span>
+          Tools I <span className="font-bold">build models with.</span>
         </h2>
 
         {/* Skill containers */}

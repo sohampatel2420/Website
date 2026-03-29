@@ -4,40 +4,41 @@ import { ExternalLink, Github } from 'lucide-react';
 const PROJECTS = [
     {
         id: "01",
-        title: "CineMaster",
-        subtitle: "Movie Recommendation Engine",
-        description: "A comprehensive movie discovery platform that leverages advanced algorithms to suggest personalized content. Users can explore trending titles, watch high-quality trailers, and manage their personal watchlists with a seamless, responsive interface.",
-        tags: ["MERN", "JWT", "Tailwind", "TMDB API"],
+        title: "AI E-Commerce Analyst",
+        subtitle: "Predictive Analytics & LLM Insights",
+        description: "An end-to-end predictive analytics system that forecasts next-day e-commerce revenue using machine learning. Integrates LLM-based automated insight generation for business analysis, with interactive Streamlit dashboards for real-time data exploration and visualization.",
+        tags: ["Python", "Pandas", "XGBoost", "Scikit-learn", "LLMs", "Streamlit"],
         features: [
-            "Secure user authentication with JWT",
-            "Real-time movie data fetching from TMDB",
-            "Personalized watchlist management",
-            "Responsive design for all devices"
+            "End-to-end predictive analytics pipeline with XGBoost",
+            "Next-day e-commerce revenue forecasting",
+            "LLM-based automated business insight generation",
+            "Interactive Streamlit dashboard for data visualization"
         ],
-        demoLink: "https://cine-master-flame.vercel.app/",
-        repoLink: "https://github.com/VrajPatel1635/CineMaster",
-        image: "/images/projects/cinema.png"
+        demoLink: "https://github.com/sohampatel2420/AI-Powered-E-Commerce-Growth-Analyst",
+        repoLink: "https://github.com/sohampatel2420/AI-Powered-E-Commerce-Growth-Analyst.git",
+        image: "/images/projects/ecommerce.png"
     },
     {
         id: "02", 
-        title: "WatchWise", 
-        subtitle: "AI Movie & TV Discovery + Watchlist", 
-        description: "A full-stack movie and TV discovery platform powered by TMDB, featuring trending hubs, detailed content pages, trailer playback, and an AI chatbot for quick recommendations. Users can securely sign up/login, build a personal watchlist, and track progress with a smooth, responsive UI.", 
-        tags: ["MERN", "JWT", "Tailwind", "TMDB API", "OpenRouter"], 
-        features: [ "Secure user authentication with JWT", "Real-time movie/TV discovery and search via TMDB", "Personal watchlist with status tracking and favorites", "AI chatbot recommendations with TMDB-assisted context" ],
-        demoLink: "https://watchwise-xi.vercel.app/",
-        repoLink: "https://github.com/VrajPatel1635/WatchWise",
-        image: "/images/projects/watchwise.png"
+        title: "RAG PDF Q&A", 
+        subtitle: "Retrieval-Augmented Generation System", 
+        description: "A Retrieval-Augmented Generation (RAG) pipeline for document-based question answering. Uses FAISS vector search with embedding-based semantic retrieval and local LLMs via Ollama to generate accurate, context-aware responses from uploaded PDF documents.", 
+        tags: ["Python", "FAISS", "Embeddings", "LLMs", "Ollama", "Streamlit"], 
+        features: [ "RAG pipeline for intelligent document Q&A", "FAISS vector search with semantic retrieval", "Local LLM inference via Ollama", "Streamlit-based interactive PDF upload & query interface" ],
+        demoLink: "https://github.com/sohampatel2420/RAG-powered-PDF-Search-Engine",
+        repoLink: "https://github.com/sohampatel2420/RAG-powered-PDF-Search-Engine.git",
+        image: "/images/projects/ragpdf.png"
     },
     {
         id: "03", 
-        title: "MarkME", 
-        subtitle: "AI Face-Recognition Attendance System", 
-        description: "An automated attendance platform that marks presence from classroom group photos using a MERN backend + a FastAPI AI service. Includes role-based dashboards (Admin/Teacher/Principal), student/class management, bulk onboarding, and downloadable attendance reports.", tags: ["MERN", "FastAPI", "MongoDB", "Cloudinary", "InsightFace"], 
-        features: [ "AI-based attendance from classroom photos (InsightFace embeddings)", "Role-based access for Admin, Teacher, and Principal", "Bulk student upload via Excel + ZIP photo upload", "Monthly attendance report export to Excel (.xlsx)" ], 
-        demoLink: "https://markme-ai-online.vercel.app", 
-        repoLink: "https://github.com/vedantx001/SIH-MarkME",
-        image: "/images/projects/markme.png"
+        title: "Vehicle Data EDA", 
+        subtitle: "Exploratory Data Analysis Project", 
+        description: "A comprehensive exploratory data analysis project on a real-world vehicle dataset. Performed end-to-end data cleaning, preprocessing, and statistical analysis to uncover hidden trends and patterns, with rich visualizations created using Matplotlib and Seaborn.",
+        tags: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Jupyter"],
+        features: [ "End-to-end data cleaning and preprocessing", "Statistical analysis with trend identification", "Rich data visualizations and pattern discovery", "Jupyter Notebook-based reproducible analysis" ], 
+        demoLink: "https://github.com/sohampatel2420/Vehicle-Dataset-Comprehensive-Data-Analysis", 
+        repoLink: "https://github.com/sohampatel2420/Vehicle-Dataset-Comprehensive-Data-Analysis.git",
+        image: "/images/projects/vehicle.png"
     }
 ];
 

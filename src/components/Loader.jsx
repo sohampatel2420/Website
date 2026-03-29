@@ -27,7 +27,7 @@ const Loader = () => {
       <div className="flex flex-col items-center">
         {/* Minimalist Brand Name */}
         <div className="text-sm md:text-base font-bold tracking-[0.4em] uppercase mb-12 text-white">
-          Vraj.Dev
+          Soham.Data
         </div>
         
         {/* Percentage Counter */}

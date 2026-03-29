@@ -132,7 +132,7 @@ const Hero = () => {
                   margin: 0,
                 }}
               >
-                VRAJ
+                SOHAM
               </h1>
               <h1
                 className="leading-[0.85] font-black uppercase tracking-tighter"
@@ -173,7 +173,7 @@ const Hero = () => {
                 transition: 'opacity 0.8s ease 0.8s, transform 0.8s ease 0.8s',
               }}
             >
-              Engineering student building modern web applications — focused on the MERN stack, AI exploration, and real-world problem solving.
+              Data Science fresher building intelligent ML & GenAI solutions — focused on predictive analytics, NLP, and real-world problem solving.
             </p>
 
             {/* Buttons */}
@@ -194,12 +194,14 @@ const Hero = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
               </button>
-              <button
-                onClick={scrollToContact}
+              <a
+                href="https://drive.google.com/uc?export=download&id=13fCA6CTVu2Jo2boH2g3YKJ-fgfHNhQqy"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hero-btn-outline"
               >
-                LET'S TALK
-              </button>
+                RESUME
+              </a>
             </div>
           </div>
 
@@ -233,18 +235,18 @@ const Hero = () => {
                   className="ml-3 text-xs tracking-wider uppercase"
                   style={{ color: '#282828', fontFamily: 'monospace' }}
                 >
-                  developer.js
+                  data_scientist.py
                 </span>
               </div>
 
               {/* Code content */}
               <div className="px-5 py-5" style={{ fontFamily: '"Fira Code", "Courier New", monospace', fontSize: '13px', lineHeight: '1.9' }}>
                 {[
-                  { num: '1', code: <><span style={{ color: '#7c7c7c' }}>const</span> <span style={{ color: '#0a0a0a' }}>developer</span> <span style={{ color: '#7c7c7c' }}>=</span> {'{'}</> },
-                  { num: '2', code: <>&nbsp;&nbsp;name: <span style={{ color: '#555' }}>"Vraj Patel"</span>,</> },
-                  { num: '3', code: <>&nbsp;&nbsp;role: <span style={{ color: '#555' }}>"Full-Stack Dev"</span>,</> },
-                  { num: '4', code: <>&nbsp;&nbsp;stack: [<span style={{ color: '#555' }}>"React"</span>, <span style={{ color: '#555' }}>"Node"</span>, <span style={{ color: '#555' }}>"MongoDB"</span>],</> },
-                  { num: '5', code: <>&nbsp;&nbsp;passion: <span style={{ color: '#555' }}>"Building things"</span>,</> },
+                  { num: '1', code: <><span style={{ color: '#7c7c7c' }}>data_scientist</span> <span style={{ color: '#0a0a0a' }}>=</span> {'{'}</> },
+                  { num: '2', code: <>&nbsp;&nbsp;name: <span style={{ color: '#555' }}>"Soham Patel"</span>,</> },
+                  { num: '3', code: <>&nbsp;&nbsp;role: <span style={{ color: '#555' }}>"Data Scientist"</span>,</> },
+                  { num: '4', code: <>&nbsp;&nbsp;stack: [<span style={{ color: '#555' }}>"Python"</span>, <span style={{ color: '#555' }}>"ML"</span>, <span style={{ color: '#555' }}>"GenAI"</span>],</> },
+                  { num: '5', code: <>&nbsp;&nbsp;passion: <span style={{ color: '#555' }}>"Turning data into insights"</span>,</> },
                   { num: '6', code: <>{'};'}</> },
                 ].map((line) => (
                   <div key={line.num} className="flex items-start gap-4">
