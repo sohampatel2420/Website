@@ -69,14 +69,14 @@ const About = () => {
                         <div className="absolute -left-[2.5px] top-4 w-1 h-1 bg-white/40 rounded-full"></div>
 
                         <p className="text-gray-400 text-lg md:text-xl leading-relaxed font-light max-w-xl">
-                            I am <span className="text-white font-bold">Soham Patel</span>, a Data Science fresher with hands-on experience in Machine Learning, NLP, and Generative AI. Proficient in Python, SQL, data preprocessing, exploratory data analysis, and model building. Actively seeking Data Science / AI-ML opportunities to apply analytical and problem-solving skills in real-world scenarios.
+                            I am <span className="text-white font-bold">Soham Patel</span>, a Data Science enthusiast with hands-on experience in Machine Learning, Deep Learning, NLP, Generative AI and Agentic-AI. Proficient in Python, SQL, data preprocessing, exploratory data analysis, and model building. Actively seeking Data Science / AI-ML opportunities to apply analytical and problem-solving skills in real-world scenarios.
                         </p>
                         
                         <div className="grid grid-cols-2 gap-8 pt-4">
                             <div className="space-y-2">
                                 <span className="block text-[10px] tracking-[0.2em] text-white/30 uppercase">Focus</span>
                                 <span className="block text-md text-gray-300 font-light">Machine Learning & AI</span>
-                                <span className="block text-md text-gray-300 font-light">NLP & Generative AI</span>
+                                <span className="block text-md text-gray-300 font-light">Generative AI & Agentic AI</span>
                             </div>
                             <div className="space-y-2">
                                 <span className="block text-[10px] tracking-[0.2em] text-white/30 uppercase">Education</span>
