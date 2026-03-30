@@ -173,7 +173,7 @@ const Hero = () => {
                 transition: 'opacity 0.8s ease 0.8s, transform 0.8s ease 0.8s',
               }}
             >
-              Data Science fresher building intelligent ML & GenAI solutions — focused on predictive analytics, NLP, and real-world problem solving.
+              Data Science enthusiast building intelligent ML & GenAI solutions — focused on predictive analytics, NLP, and real-world problem solving.
             </p>
 
             {/* Buttons */}
@@ -195,7 +195,7 @@ const Hero = () => {
                 </svg>
               </button>
               <a
-                href="https://drive.google.com/uc?export=download&id=13fCA6CTVu2Jo2boH2g3YKJ-fgfHNhQqy"
+                href="https://drive.google.com/file/d/1EPNfY2MPxym9bvOTrZGulGZOFT2BWMeb/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hero-btn-outline"
