@@ -195,7 +195,7 @@ const Hero = () => {
                 </svg>
               </button>
               <a
-                href="https://drive.google.com/file/d/1OBT8qX_Fn5aAB5jVh9XveLF4lBVftkJv/view?usp=sharing"
+                href="https://drive.google.com/file/d/1OBT8qX_Fn5aAB5jVh9XveLF4lBVftkJv/view"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hero-btn-outline"
